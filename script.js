@@ -17,9 +17,16 @@ let numOfPapers = 3;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-  book.style.transform = "translateX(50%)";
-  prevBtn.style.transform = "translateX(-180px)";
-  nextBtn.style.transform = "translateX(180px)";
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  if (mediaQuery.matches) {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-180px)";
+    nextBtn.style.transform = "translateX(180px)";
+  } else {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-90px)";
+    nextBtn.style.transform = "translateX(90px)";
+  }
 }
 
 function closeBook(isAtBeginning) {
