@@ -16,7 +16,11 @@ let currentLocation = 1;
 let numOfPapers = 3;
 let maxLocation = numOfPapers + 1;
 
-function openBook() {}
+function openBook() {
+  book.style.transform = "translateX(50%)";
+  prevBtn.style.transform = "translateX(-180px)";
+  nextBtn.style.transform = "translateX(180px)";
+}
 
 function closeBook() {}
 
@@ -26,12 +30,15 @@ function goNextPage() {
       case 1:
         openBook();
         paper1.classList.add("flipped");
+        paper1.style.zIndex = 1;
         break;
       case 2:
         paper2.classList.add("flipped");
+        paper2.style.zIndex = 2;
         break;
       case 3:
         paper3.classList.add("flipped");
+        paper3.style.zIndex = 3;
         closeBook();
         break;
       default:
