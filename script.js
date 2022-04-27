@@ -48,4 +48,25 @@ function goNextPage() {
   }
 }
 
-function goPrevPage() {}
+function goPrevPage() {
+  if (currentLocation > 1) {
+    switch (currentLocation) {
+      case 2:
+        closeBook();
+        paper1.classList.remove("flipped");
+        paper1.style.zIndex = 3;
+        break;
+      case 3:
+        paper2.classList.remove("flipped");
+        paper2.style.zIndex = 2;
+        break;
+      case 4:
+        paper3.classList.remove("flipped");
+        paper3.style.zIndex = 1;
+        break;
+      default:
+        throw new Error("unknown state");
+    }
+    currentLocation--;
+  }
+}
