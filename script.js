@@ -24,8 +24,8 @@ function openBook() {
     nextBtn.style.transform = "translateX(180px)";
   } else {
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-90px)";
-    nextBtn.style.transform = "translateX(90px)";
+    prevBtn.style.transform = "translateX(-70px)";
+    nextBtn.style.transform = "translateX(70px)";
   }
 }
 
